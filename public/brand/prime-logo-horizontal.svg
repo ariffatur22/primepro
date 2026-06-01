@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" role="img" aria-labelledby="title">
+  <title>Prime Property</title>
+  <rect width="860" height="220" fill="transparent"/>
+  <g transform="translate(10,20)">
+    <polygon points="10,85 70,25 70,180 50,170 50,85 10,122" fill="#C9A961"/>
+    <polygon points="78,16 100,0 100,188 78,176" fill="#B33A3A"/>
+    <polygon points="108,0 154,40 154,140 130,160 130,118 108,95 108,188 84,200 84,0" fill="#1A1A1A"/>
+  </g>
+  <text x="210" y="100" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="10">PRIME</text>
+  <text x="315" y="162" fill="#1A1A1A" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="400" letter-spacing="12">PROPERTY</text>
+  <line x1="215" y1="152" x2="290" y2="152" stroke="#1A1A1A" stroke-width="3"/>
+  <line x1="638" y1="152" x2="715" y2="152" stroke="#1A1A1A" stroke-width="3"/>
+</svg>

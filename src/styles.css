@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1a1a1a;
+  --color-accent-gold: #c9a961;
+  --color-accent-red: #b33a3a;
+  --color-white: #ffffff;
+  --color-gray-soft: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-primary);
+  background: var(--color-white);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container-main {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+
+.btn-primary {
+  @apply rounded-md bg-brand-gold px-4 py-2 font-bold text-brand-primary transition duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-lg hover:shadow-brand-gold/20;
+}
+
+.btn-outline {
+  @apply rounded-md border border-brand-gold px-4 py-2 font-bold text-brand-gold transition duration-300 hover:-translate-y-0.5 hover:bg-brand-gold hover:text-brand-primary;
+}
+
+.input {
+  @apply w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-brand-gold focus:outline-none;
+}
+
+.lux-card {
+  @apply rounded-xl transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10;
+}
+
+.hero-glow {
+  box-shadow: 0 0 0 1px rgba(201, 169, 97, 0.25), 0 8px 28px rgba(201, 169, 97, 0.18);
+}
+
+.soft-appear {
+  opacity: 0;
+  animation: softAppear 0.8s ease-out forwards;
+}
+
+.soft-appear-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.soft-appear-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.soft-appear-delay-3 {
+  animation-delay: 0.45s;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 9999px;
+  background: #c9a961;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+.nav-link-active::after {
+  transform: scaleX(1);
+}
+
+.surface-soft {
+  @apply rounded-xl border border-black/5 bg-brand-soft;
+}
+
+.surface-white {
+  @apply rounded-xl border border-black/5 bg-white;
+}
+
+.hero-stat-card {
+  @apply rounded-xl border border-white/20 bg-black/45 p-4 backdrop-blur-sm sm:p-5;
+}
+
+@keyframes softAppear {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .container-main {
+    @apply px-4;
+  }
+}
